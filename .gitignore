@@ -1,0 +1,10 @@
+# Environments
+.venv
+/venv
+
+# Configuration
+.conf
+
+# macOS
+.DS_Store
+
