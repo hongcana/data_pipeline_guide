@@ -3,7 +3,7 @@
 /venv
 
 # Configuration
-.conf
+*.conf
 
 # macOS
 .DS_Store
