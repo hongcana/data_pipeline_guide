@@ -17,15 +17,13 @@ datas = []
 location = response_json["iss_position"]
 datas.append(location["latitude"])
 datas.append(location["longitude"])
-datas.append(
-    datetime.fromtimestamp(response_json["timestamp"]).strftime("%Y-%m-%d %H:%M")
-)
+datas.append(response_json["timestamp"])
 
 print(datas)
 export_file = "export_file.csv"
 
-with open(export_file, "w", newline="") as fp:
-    csvw = csv.writer(fp)
+with open(export_file, "a", newline="") as fp:
+    csvw = csv.writer(fp, delimiter="|")
     csvw.writerows([datas])  # 2차원 리스트로 처리
 fp.close()
 
